@@ -1,16 +1,65 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { FormsModule } from '@angular/forms';
+import {CheckboxModule} from 'primeng/checkbox';
+import {CalendarModule} from 'primeng/calendar';
+
 
 import { AppComponent } from './app.component';
+import {ButtonModule} from 'primeng/button';
+import {PanelModule} from 'primeng/panel';
+import {CardModule} from 'primeng/card';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {UtilisateurService} from './core/services/utilisateur.service';
+import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './core/components/login/login.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { MenuComponent } from './core/components/menu/menu.component';
+import { FooterComponent } from './core/components/footer/footer.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { RegisterComponent } from './core/components/register/register.component';
+import { AddDoodleComponent } from './core/components/add-doodle/add-doodle.component';
+import { MesDoodleComponent } from './core/components/mes-doodle/mes-doodle.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'adddoodle', component: AddDoodleComponent },
+  { path: 'mesdoodle', component: MesDoodleComponent },
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    MenuComponent,
+    FooterComponent,
+    HeaderComponent,
+    RegisterComponent,
+    AddDoodleComponent,
+    MesDoodleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ButtonModule,
+    FormsModule,
+    CheckboxModule,
+    CalendarModule,
+    HttpClientModule,
+    PanelModule,
+    CardModule,
+    RadioButtonModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
-  providers: [],
+  providers: [UtilisateurService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
