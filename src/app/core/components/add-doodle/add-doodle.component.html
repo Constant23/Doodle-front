@@ -1,0 +1,87 @@
+<div class="container">
+
+  <div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row" style="padding: 5px">
+        <div class="col-lg-4">
+          <div class="">
+          <div class="card mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Type de sondage</h6>
+            </div>
+            <div class="card-body">
+              <div class="ui-g" style="width:250px;margin-bottom:10px">
+                <div class="ui-g-12"><p-radioButton name="group2" value="typeSondage1" label="Sondage de dates" (click)= "changeValue(true,false)" [(ngModel)]="typeSondage" inputId="preopt1"></p-radioButton></div>
+                <div class="ui-g-12"><p-radioButton name="group2" value="typeSondage2" label="Sondage de Lieux" (click)= "changeValue(true,true)" [(ngModel)]="typeSondage" inputId="preopt2"></p-radioButton></div>
+                <div class="ui-g-12"><p-radioButton name="group2" value="typeSondage3" label="Sondage de dates et lieux" (click)= "changeValue(true,true)" [(ngModel)]="typeSondage" inputId="preopt3"></p-radioButton></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="">
+            <div class="card mb-4" *ngIf="showLieu">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Créer un doodle !</h6>
+              </div>
+              <div class="card-body">
+                <form class="user">
+                  <div class="form-group">
+                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Intitulé">
+                  </div>
+                  <div class="form-group">
+                    <textarea type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Resumé"></textarea>
+                  </div>
+
+                  <div class="card mb-4">
+                    <div class="card-header">
+                      Propositions de lieux
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row">
+                        <div class="col-sm-9 mb-3 mb-sm-0">
+                          <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Saisir un lieu">
+                        </div>
+                        <div class="col-sm-3">
+                          <p-checkbox name="groupname" value="val1" label="Déjeuner" [(ngModel)]="selectedValues"></p-checkbox>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="card mb-4" *ngIf="showDate">
+                    <div class="card-header">
+                      Propositions de Dates
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row">
+                        <div class="col-sm-5 mb-3 mb-sm-0">
+                          <p-calendar [(ngModel)]="date3" [showIcon]="true" placeholder="Choisir date"></p-calendar>
+                        </div>
+                        <div class="col-sm-4" >
+                          <p-calendar [(ngModel)]="date8" [timeOnly]="true" placeholder="Choisir heure" style=""></p-calendar>
+                        </div>
+                        <div class="col-sm-3">
+                          <p-checkbox name="groupname" value="val1" label="Déjeuner" [(ngModel)]="selectedValues"></p-checkbox>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="login.html" class="btn btn-primary btn-user btn-block">
+                    Enregister
+                  </a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
