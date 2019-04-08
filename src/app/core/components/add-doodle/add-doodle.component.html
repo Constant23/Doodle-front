@@ -12,9 +12,9 @@
             </div>
             <div class="card-body">
               <div class="ui-g" style="width:250px;margin-bottom:10px">
-                <div class="ui-g-12"><p-radioButton name="group2" value="typeSondage1" label="Sondage de dates" (click)= "changeValue(true,false)" [(ngModel)]="typeSondage" inputId="preopt1"></p-radioButton></div>
-                <div class="ui-g-12"><p-radioButton name="group2" value="typeSondage2" label="Sondage de Lieux" (click)= "changeValue(true,true)" [(ngModel)]="typeSondage" inputId="preopt2"></p-radioButton></div>
-                <div class="ui-g-12"><p-radioButton name="group2" value="typeSondage3" label="Sondage de dates et lieux" (click)= "changeValue(true,true)" [(ngModel)]="typeSondage" inputId="preopt3"></p-radioButton></div>
+                <div class="ui-g-12" ><p-radioButton (click)= "changeValue(true,false)" name="group2" value="typeSondage1" label="Sondage de Lieux"   [(ngModel)]="typeSondage" inputId="preopt1"></p-radioButton></div>
+                <div class="ui-g-12" ><p-radioButton (click)= "changeValue(false,true)" name="group2" value="typeSondage2" label="Sondage de dates" [(ngModel)]="typeSondage" inputId="preopt2"></p-radioButton></div>
+                <div class="ui-g-12" ><p-radioButton (click)= "changeValue(true,true)" name="group2" value="typeSondage3" label="Sondage de dates et lieux"  [(ngModel)]="typeSondage" inputId="preopt3"></p-radioButton></div>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="col-lg-8">
           <div class="">
-            <div class="card mb-4" *ngIf="showLieu">
+            <div class="card mb-4">
               <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Créer un doodle !</h6>
               </div>
@@ -35,39 +35,92 @@
                     <textarea type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Resumé"></textarea>
                   </div>
 
-                  <div class="card mb-4">
+                  <div class="card mb-4" *ngIf="showLieu">
                     <div class="card-header">
-                      Propositions de lieux
+                      <i class="fas fa-map-marker mr-1"></i>Propositions de lieux
                     </div>
                     <div class="card-body">
                       <div class="form-group row">
-                        <div class="col-sm-9 mb-3 mb-sm-0">
-                          <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Saisir un lieu">
+                        <div class="col-sm-8 mb-3 mb-sm-0">
+                          <input type="text" class="form-control form-control-user" value="{{txtlieu}}" [(ngModel)]="txtlieu" name="txtlieu" placeholder="Saisir un lieu">
                         </div>
                         <div class="col-sm-3">
-                          <p-checkbox name="groupname" value="val1" label="Déjeuner" [(ngModel)]="selectedValues"></p-checkbox>
+                          <p-checkbox label="Déjeuner" [(ngModel)]="aUnDejLieu" name="aUnDejLieu" value="aUnDejLieu"></p-checkbox>
                         </div>
+                        <div class="col-sm-1">
+                          <a class="btn btn-success btn-circle" (click)= "add_lieu()">
+                            <i class="fas fa-plus"></i>
+                          </a>
+                        </div>
+                        <table class="table">
+                          <thead>
+                          <tr>
+                            <th scope="col" width="60%">Lieux proposés</th>
+                            <th scope="col"> A un dejeuné</th>
+                            <th scope="col"> Sup</th>
+                          </tr>
+                          </thead>
+                          <tbody *ngFor="let lieu of lieuListe">
+                          <tr>
+                            <td>{{ lieu.lieu }}</td>
+                            <td *ngIf="lieu.dejeuner"><i class="fas fa-check-circle" style="color:green"></i></td>
+                            <td *ngIf="!lieu.dejeuner"><i class="fas fa-times" style="color:red"></i></td>
+                            <td>
+                              <a class="btn btn-danger btn-circle" (click)= "remove_lieu(lieu.lieu)">
+                                <i class="fas fa-minus"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
 
-
                   <div class="card mb-4" *ngIf="showDate">
                     <div class="card-header">
-                      Propositions de Dates
+                      <i class="fas fa-calendar mr-1">  </i>Propositions de Dates
                     </div>
                     <div class="card-body">
                       <div class="form-group row">
                         <div class="col-sm-5 mb-3 mb-sm-0">
-                          <p-calendar [(ngModel)]="date3" [showIcon]="true" placeholder="Choisir date"></p-calendar>
+                          <p-calendar [(ngModel)]="datepropose" name="datepropose" value="datepropose" [showIcon]="true" placeholder="Choisir date"></p-calendar>
                         </div>
                         <div class="col-sm-4" >
-                          <p-calendar [(ngModel)]="date8" [timeOnly]="true" placeholder="Choisir heure" style=""></p-calendar>
+                          <p-calendar [(ngModel)]="Heurepropose" name="Heurepropose" value="Heurepropose"  [timeOnly]="true" placeholder="Choisir heure" style=""></p-calendar>
                         </div>
-                        <div class="col-sm-3">
-                          <p-checkbox name="groupname" value="val1" label="Déjeuner" [(ngModel)]="selectedValues"></p-checkbox>
+                        <div class="col-sm-2">
+                          <p-checkbox [(ngModel)]="aUnDejDate" name="aUnDejDate" value="aUnDejDate"  label="Déj" ></p-checkbox>
+                        </div>
+                        <div class="col-sm-1">
+                          <a class="btn btn-success btn-circle" (click)= "add_date()">
+                            <i class="fas fa-plus"></i>
+                          </a>
                         </div>
                       </div>
+
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th scope="col" width="60%">Dates proposées</th>
+                          <th scope="col"> A un dejeuné</th>
+                          <th scope="col"> Sup</th>
+                        </tr>
+                        </thead>
+                        <tbody *ngFor="let date of dateListe">
+                        <tr>
+                          <td>{{ date.date }}</td>
+                          <td *ngIf="date.dejeuner"><i class="fas fa-check-circle" style="color:green"></i></td>
+                          <td *ngIf="!date.dejeuner"><i class="fas fa-times" style="color:red"></i></td>
+                          <td>
+                            <a class="btn btn-danger btn-circle" (click)= "remove_date(date.daterelle)">
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+
                     </div>
                   </div>
 
