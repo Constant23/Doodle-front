@@ -22,10 +22,13 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { RegisterComponent } from './core/components/register/register.component';
 import { AddDoodleComponent } from './core/components/add-doodle/add-doodle.component';
 import { MesDoodleComponent } from './core/components/mes-doodle/mes-doodle.component';
+import { LogoutComponent } from './core/components/logout/logout.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'adddoodle', component: AddDoodleComponent },
   { path: 'mesdoodle', component: MesDoodleComponent },
@@ -41,7 +44,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     RegisterComponent,
     AddDoodleComponent,
-    MesDoodleComponent
+    MesDoodleComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

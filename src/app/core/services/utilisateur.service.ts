@@ -8,10 +8,23 @@ export class UtilisateurService {
 
   constructor(private http: HttpClient) { }
 
-  urlUtilisateur = 'http://localhost:4200/rest/utilisateurs';
-  urlUtilisateurByIdName = 'http://localhost:8181/rest/utilisateurs/';
-
-  getUtilisateur() {
-    return this.http.get(this.urlUtilisateur);
+  getLogin(username) {
+    // post these details to API server return user info if correct
+    return this.http.post('/rest/utilisateurs/login', {
+      "email": username
+    });
   }
+
+  registerUser(nom, prenom, email) {
+    // post these details to API server return user info if correct
+    return this.http.post('/rest/utilisateurs/add', {
+      "nom": nom,
+      "prenom": prenom,
+      "email": email
+    });
+  }
+
+  /*getUtilisateur() {
+    return this.http.get(this.urlUtilisateur);
+  }*/
 }

@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul  class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
@@ -12,8 +12,9 @@
   <!-- Divider -->
   <hr class="sidebar-divider my-0">
 
+  <div *ngIf="isUserLoggedIn" >
   <!-- Nav Item - Dashboard -->
-  <li class="nav-item active">
+  <li class="nav-item active" >
     <a class="nav-link" href="adddoodle">
       <i class="fas fa-plus"></i>
       <span>Créer un doodle</span></a>
@@ -39,6 +40,7 @@
   <!-- Divider -->
   <hr class="sidebar-divider">
 
+  </div>
 
 </ul>
 <!-- End of Sidebar -->

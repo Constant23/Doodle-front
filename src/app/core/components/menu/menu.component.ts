@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GlobalService} from '../../services/global.service';
 
 @Component({
   selector: 'app-menu',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
-  constructor() { }
+  isUserLoggedIn;
+  constructor(private globalservice: GlobalService) {
+    this.globalservice.isUserLoggedIn
+      .subscribe(value => {
+        this.isUserLoggedIn = value;
+      });
+    //this.currentUser = localStorage.getItem('currentUser');
+  }
 
   ngOnInit() {
   }

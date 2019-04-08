@@ -15,13 +15,24 @@ export class AppComponent implements OnInit {
   }
 
   constructor(private utilisateurService: UtilisateurService) {
-    console.log('tot');
+    //localStorage.clear();
+   /* console.log('tot');
+    localStorage.setItem('currentUser', JSON.stringify({ 'token': 'token', 'name': 'name' }));
     this.utilisateurService.getUtilisateur()
     .subscribe((data) => {
       /!* tslint:disable:no-string-literal*!/
       this.userListes = data;
       console.log(data);
     });
+    console.log(JSON.parse(localStorage.getItem('currentUser')));
+    if(localStorage.getItem('currentUser')) {
+      console.log('lol1');
+    }
+    localStorage.clear();
+    if(localStorage.getItem('currentUser')) {
+      console.log('lol2');
+    }
+    console.log(JSON.parse(localStorage.getItem('currentUser')));*/
   }
 }
 

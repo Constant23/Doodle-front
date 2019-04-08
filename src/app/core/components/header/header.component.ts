@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {GlobalService} from '../../services/global.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isUserLoggedIn: boolean;
+  currentUser;
+  username;
+
+  constructor(private globalservice: GlobalService) {
+    this.globalservice.isUserLoggedIn
+      .subscribe(value => {
+        this.isUserLoggedIn = value;
+      });
+    this.globalservice.username
+      .subscribe(value => {
+        this.username = value;
+      });
+  }
 
   ngOnInit() {
   }
