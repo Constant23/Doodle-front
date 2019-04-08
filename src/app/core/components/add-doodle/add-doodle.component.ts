@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {DatePipe} from '@angular/common';
 import {GlobalService} from '../../services/global.service';
 import {Router} from '@angular/router';
+import {SondageService} from '../../services/sondage.service';
+import {Message} from 'primeng/api';
 
 @Component({
   selector: 'app-add-doodle',
@@ -27,18 +29,58 @@ export class AddDoodleComponent implements OnInit {
   datepropose: string = '';
 
   lieuListe = []
-
   dateListe = []
+  intitule: string = '';
+  resume: string = '';
+
+  msgs: Message[] = [];
 
 
-  constructor(private globalservice: GlobalService, private router: Router) { }
+  constructor(private globalservice: GlobalService, private router: Router, private sondageService: SondageService) { }
 
   ngOnInit() {
     if (localStorage.getItem('currentUser')) {
       this.globalservice.isUserLoggedIn.next(true);
-      this.globalservice.username.next(JSON.parse(localStorage.getItem('currentUser'))['nom'] + ' ' + JSON.parse(localStorage.getItem('currentUser'))['prenom']);
+      this.globalservice.username.next(JSON.parse(localStorage.getItem('currentUser'))['nom'] +
+        ' ' + JSON.parse(localStorage.getItem('currentUser'))['prenom']);
     } else {
       this.router.navigate(['login']);
+    }
+  }
+
+  sondageAdd(event) {
+    event.preventDefault()
+    const target = event.target
+    const intitule = target.querySelector('#intitule').value;
+    const resume = target.querySelector('#resume').value;
+    const idResponsable = JSON.parse(localStorage.getItem('currentUser'))['id'];
+
+    if (this.typeSondage === 'typeSondage2') {
+      this.sondageService.addSondageDate(idResponsable, intitule, resume, this.dateListe).subscribe(data => {
+        if (data != null) {
+          this.router.navigate(['adddoodle']);
+          this.lieuListe = [];
+          this.dateListe = [];
+          this.resume = '';
+          this.intitule = '';
+          this.show('success','Sondage enregisté avec succes');
+        } else {
+          this.router.navigate(['logout']);
+        }
+      });
+    } else if (this.typeSondage === 'typeSondage1') {
+      this.sondageService.addSondageLieu(idResponsable, intitule, resume, this.lieuListe).subscribe(data => {
+        if (data != null) {
+          this.router.navigate(['adddoodle']);
+          this.lieuListe = [];
+          this.dateListe = [];
+          this.resume = '';
+          this.intitule = '';
+          this.show('success','Sondage enregisté avec succes');
+        } else {
+          this.router.navigate(['logout']);
+        }
+      });
     }
   }
 
@@ -50,7 +92,8 @@ export class AddDoodleComponent implements OnInit {
   add_lieu() {
     this.lieuListe.push({
       lieu: this.txtlieu,
-      dejeuner: Boolean(this.aUnDejLieu.length)
+      aUnDejeuner: Boolean(this.aUnDejLieu.length),
+      estValider: false
     });
   }
 
@@ -68,8 +111,10 @@ export class AddDoodleComponent implements OnInit {
     var datePipe = new DatePipe('en-FR');
     this.dateListe.push({
       daterelle: this.datepropose,
-      date:  datePipe.transform(d, 'dd/MM/yyyy') + ' : ' + datePipe.transform(this.Heurepropose, 'HH:mm') ,
-      dejeuner: Boolean(this.aUnDejDate.length)
+      date:  datePipe.transform(d, 'dd-MM-yyyy') + ' ' + datePipe.transform(this.Heurepropose, 'HH:mm:00') ,
+      aUnDejeuner: Boolean(this.aUnDejDate.length),
+      estValider: false
+
     });
   }
 
@@ -80,5 +125,13 @@ export class AddDoodleComponent implements OnInit {
     if (index === -1) {
       this.dateListe.splice(index, 1);
     }
+  }
+
+  show(type,message) {
+    this.msgs.push({severity:type, summary:message, detail:'Doodle'});
+  }
+
+  hide() {
+    this.msgs = [];
   }
 }

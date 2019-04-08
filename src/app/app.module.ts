@@ -5,6 +5,8 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import { FormsModule } from '@angular/forms';
 import {CheckboxModule} from 'primeng/checkbox';
 import {CalendarModule} from 'primeng/calendar';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import {PanelModule} from 'primeng/panel';
 import {CardModule} from 'primeng/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {UtilisateurService} from './core/services/utilisateur.service';
+import {SondageService} from './core/services/sondage.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './core/components/login/login.component';
 import { HomeComponent } from './core/components/home/home.component';
@@ -53,6 +56,8 @@ const appRoutes: Routes = [
     FormsModule,
     CheckboxModule,
     CalendarModule,
+    MessagesModule,
+    MessageModule,
     HttpClientModule,
     PanelModule,
     CardModule,
@@ -63,7 +68,9 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [UtilisateurService],
+  providers: [
+    UtilisateurService,
+    SondageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
