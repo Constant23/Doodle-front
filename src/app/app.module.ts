@@ -9,6 +9,7 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 
 
+
 import { AppComponent } from './app.component';
 import {ButtonModule} from 'primeng/button';
 import {PanelModule} from 'primeng/panel';
@@ -26,6 +27,7 @@ import { RegisterComponent } from './core/components/register/register.component
 import { AddDoodleComponent } from './core/components/add-doodle/add-doodle.component';
 import { MesDoodleComponent } from './core/components/mes-doodle/mes-doodle.component';
 import { LogoutComponent } from './core/components/logout/logout.component';
+import { ParticiperListeComponent } from './core/components/participer-liste/participer-liste.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +37,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'adddoodle', component: AddDoodleComponent },
   { path: 'mesdoodle', component: MesDoodleComponent },
+  { path: 'participer-liste', component: ParticiperListeComponent },
 ];
 
 @NgModule({
@@ -49,6 +52,7 @@ const appRoutes: Routes = [
     AddDoodleComponent,
     MesDoodleComponent,
     LogoutComponent,
+    ParticiperListeComponent,
   ],
   imports: [
     BrowserModule,
