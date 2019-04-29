@@ -1,0 +1,58 @@
+<div class="container">
+
+  <div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+      <!--<p-messages [(value)]="msgs"></p-messages>
+       Nested Row within Card Body -->
+      <div class="row" style="padding: 5px">
+        <div class="col-lg-6">
+          <div class="">
+            <div class="card mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Detail sondage</h6>
+              </div>
+              <div class="card-body">
+                <div style="color: #1c294e;">
+                  Intitulé
+                </div>
+                <div class="">
+                  {{sondageDetail['intitule']}}
+                </div>
+                <div style="color: #1c294e;">
+                  Résumé
+                </div>
+                <div class="">
+                  {{sondageDetail['resume']}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="">
+            <div class="card mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Liste des propositions</h6>
+              </div>
+              <div class="card-body">
+                <tbody *ngFor="let list of sondageDetail['mesPropositions']">
+                <tr>
+                  <td width="60%">{{list['date']}}{{list['lieu']}}</td>
+                  <td width="20%">5</td>
+                  <td>
+                    <a class="btn btn-primary mr-1" routerLink="/valider-proposition/{{list['id']}}">
+                      <div class="ui-g-12" ><p-radioButton (click)= "changeValue(true,false)" name="group2" value="typeSondage1"  [(ngModel)]="typeSondage" inputId="preopt1"></p-radioButton></div>
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
