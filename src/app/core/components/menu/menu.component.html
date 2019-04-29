@@ -14,16 +14,17 @@
 
   <div *ngIf="isUserLoggedIn" >
   <!-- Nav Item - Dashboard -->
-  <li class="nav-item active" >
-    <a class="nav-link" href="adddoodle">
+  <li class="nav-item"  routerLinkActive="active">
+    <a class="nav-link" routerLink="/adddoodle">
       <i class="fas fa-plus"></i>
       <span>Créer un doodle</span></a>
   </li>
 
   <hr class="sidebar-divider">
 
-  <li class="nav-item">
-  <a class="nav-link" href="participer-liste">
+
+  <li class="nav-item"  routerLinkActive="active">
+    <a class="nav-link" routerLink="/participer-liste">
     <i class="fas fa-check"></i>
     <span>Participer un doodle</span></a>
   </li>
@@ -31,8 +32,8 @@
   <!-- Divider -->
   <hr class="sidebar-divider">
 
-  <li class="nav-item">
-    <a class="nav-link" href="mesdoodle">
+    <li class="nav-item"  routerLinkActive="active">
+      <a class="nav-link" routerLink="/mesdoodle">
       <i class="fas fa-list"></i>
       <span>Mes doodles</span></a>
   </li>

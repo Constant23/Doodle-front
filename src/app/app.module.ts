@@ -28,6 +28,8 @@ import { AddDoodleComponent } from './core/components/add-doodle/add-doodle.comp
 import { MesDoodleComponent } from './core/components/mes-doodle/mes-doodle.component';
 import { LogoutComponent } from './core/components/logout/logout.component';
 import { ParticiperListeComponent } from './core/components/participer-liste/participer-liste.component';
+import { ParticiperDetailComponent } from './core/components/participer-detail/participer-detail.component';
+import { MesDoodleDetailComponent } from './core/components/mes-doodle-detail/mes-doodle-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,6 +39,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'adddoodle', component: AddDoodleComponent },
   { path: 'mesdoodle', component: MesDoodleComponent },
+  { path: 'mesdoodle-detail/:id', component: MesDoodleDetailComponent },
   { path: 'participer-liste', component: ParticiperListeComponent },
 ];
 
@@ -53,6 +56,8 @@ const appRoutes: Routes = [
     MesDoodleComponent,
     LogoutComponent,
     ParticiperListeComponent,
+    ParticiperDetailComponent,
+    MesDoodleDetailComponent,
   ],
   imports: [
     BrowserModule,
