@@ -18,8 +18,8 @@
             <td>{{ listMesSondag['intitule'] }}</td>
             <td>{{ listMesSondag['resume'] }}</td>
             <td>
-              <a class="btn btn-primary mr-1" (click)= "remove_lieu(lieu.lieu)">
-                <i class="fa fa-check" style="color: white"> Participer</i>
+              <a class="btn btn-primary mr-1" routerLink="/participer-detail/{{ listMesSondag['id'] }}">
+                <i class="fa fa-check" style="color: white">Participer</i>
               </a>
             </td>
 

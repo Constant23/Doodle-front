@@ -40,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'adddoodle', component: AddDoodleComponent },
   { path: 'mesdoodle', component: MesDoodleComponent },
   { path: 'mesdoodle-detail/:id', component: MesDoodleDetailComponent },
+  { path: 'participer-detail/:id', component: ParticiperDetailComponent },
   { path: 'participer-liste', component: ParticiperListeComponent },
 ];
 

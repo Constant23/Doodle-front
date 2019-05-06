@@ -36,13 +36,19 @@
               </div>
               <div class="card-body">
                 <tbody *ngFor="let list of sondageDetail['mesPropositions']">
-                <tr>
+                <tr >
                   <td width="60%">{{list['date']}}{{list['lieu']}}</td>
                   <td width="20%">5</td>
                   <td>
-                    <a class="btn btn-primary mr-1" routerLink="/valider-proposition/{{list['id']}}">
-                      <div class="ui-g-12" ><p-radioButton (click)= "changeValue(true,false)" name="group2" value="typeSondage1"  [(ngModel)]="typeSondage" inputId="preopt1"></p-radioButton></div>
+                    <a *ngIf="list['aUnDejeuner'];else other_content" class="btn-xs btn-primary mr-1" style="border-radius: 5px" routerLink="/valider-proposition/{{list['id']}}">
+                       valider
                     </a>
+                    <ng-template #other_content>
+                      <a class="btn-xs btn-danger mr-1" style="border-radius: 5px" routerLink="/valider-proposition/{{list['id']}}">
+                        Annuler
+                      </a>
+                    </ng-template>
+
                   </td>
                 </tr>
                 </tbody>
