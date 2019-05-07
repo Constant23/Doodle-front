@@ -17,12 +17,12 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 
 ### Ci dessous le diagramme de classe 
 
-[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)]
 
 ## Capture d'ecran du rendu 
 -   Page d'inscription 
 
-[!(https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)]
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)]
 
 
 
