@@ -1,5 +1,21 @@
 # [APPLICATION DE TYPE DOODLE](https://github.com/Constant23/Doodle-front)
 
+## Context du projet 
+
+ce projet est un projet d'ecole pour mettre en application les differente technologie vu en cours. 
+
+c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA)
+
+Quelque resgle du metier de l'application :
+
+-   Un utilisateur peut créer un ou plusieurs réunion
+-   Une réunion est crée par un utilisateur
+-   Une réunion des proposition
+-   Un proposition peut être de type date, de type lieu ou de type date et lieu(ce qui explique l'héritage)
+-   Un utilisateur peut voter pour un proposition
+-   avant la réunion les participants sont invité par un lien unique pour renseigner leur préférence et allergie
+
+
 [SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
 For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
