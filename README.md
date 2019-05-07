@@ -20,9 +20,9 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
 
 ## Capture d'ecran du rendu 
-##### Page de connexion 
+-   Page d'inscription 
 
-[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)]
+[(https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)]
 
 
 
