@@ -4,7 +4,7 @@
 
 ce projet est un projet d'ecole pour mettre en application les differente technologie vu en cours. 
 
-c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA)
+c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA) [ici](https://github.com/Constant23/tpjpa2019sir)
 
 Quelque resgle du metier de l'application :
 
