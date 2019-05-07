@@ -17,7 +17,7 @@ Quelque resgle du metier de l'application :
 
 ci dessous le diagrame de classe 
 
-[![SB Admin 2 Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
+[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
 
 
 [SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
