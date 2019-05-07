@@ -17,12 +17,12 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 
 ### Ci dessous le diagramme de classe 
 
-[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)]
+[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
 
 ## Capture d'ecran du rendu 
 -   Page d'inscription 
 
-[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)]
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
 
 
 
