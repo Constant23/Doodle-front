@@ -15,6 +15,10 @@ Quelque resgle du metier de l'application :
 -   Un utilisateur peut voter pour un proposition
 -   avant la réunion les participants sont invité par un lien unique pour renseigner leur préférence et allergie
 
+ci dessous le diagrame de classe 
+
+[(https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)]
+
 
 [SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
