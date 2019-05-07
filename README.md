@@ -15,9 +15,18 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 -   Un utilisateur peut voter pour un proposition
 -   avant la réunion les participants sont invité par un lien unique pour renseigner leur préférence et allergie
 
-### ci dessous le diagramme de classe 
+### Ci dessous le diagramme de classe 
 
-[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
+
+## Capture d'ecran du rendu 
+##### Page de connexion 
+
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)]
+
+
+
+After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
 
 [SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
