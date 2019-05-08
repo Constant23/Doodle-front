@@ -21,9 +21,7 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 
 ## Pour populer base de données 
 
-[doodle.sql](https://github.com/Constant23/Doodle-front/blob/master/dooble.sql)
-
-vider la base doodle créée par l'API et executer ce script doodle.sql 
+vider la base doodle créée par l'API et executer ce script [doodle.sql](https://github.com/Constant23/Doodle-front/blob/master/dooble.sql)
 
 ## Capture d'ecran du rendu 
 -   Page d'inscription 
@@ -48,23 +46,32 @@ Dans cette application l'utilisateur peut :
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)
 
--   Page de création d'une reunion 
+-   Page de création d'un sondage  
+
+Pour créer un sondage l'utilisateur choisi le type de sondage (date, lieu ou date et lieu), il renseigne le titre, le resumé, il ajoute la liste des propositions de sondage. 
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/4.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/4.PNG)
 
--   Page liste de mes reunions 
+-   Page liste de mes sondages 
+
+sur la liste de ces sondages proposés il peut voir le detail d'un sondage pour valder une proposition
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/5.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/5.PNG)
 
 -   Page détail d'une reunion  
 
+Sur la liste il a la possibilité de valider une proposition compte tenu du nombre de votant.  
+
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/7.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/7.PNG)
 
 -   Page liste des sondages disponible 
 
+sur la liste de ces sondages disponible il peut choisir un sondage pour faire un vote pour une proposition . 
+
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/6.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/6.PNG)
 
 -   Page de sondage 
+ici il choisi une ou plusieur proposition dans la liste des propositions du sondage.  
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)
 
