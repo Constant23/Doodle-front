@@ -71,6 +71,7 @@ sur la liste de ces sondages disponible il peut choisir un sondage pour faire un
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/6.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/6.PNG)
 
 -   Page de sondage 
+
 ici il choisi une ou plusieur proposition dans la liste des propositions du sondage.  
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)
