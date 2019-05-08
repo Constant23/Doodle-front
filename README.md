@@ -28,6 +28,7 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
 
 -   Page de connexion 
+
 Pour des raison de simplicité l'utilisateur se connecte juste avec son email
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/2.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/2.PNG)
