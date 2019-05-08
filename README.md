@@ -38,9 +38,13 @@ Pour des raison de simplicité l'utilisateur se connecte juste avec son email
 
 -   Page d'accueil
 Dans cette application l'utilisateur peut :
+
 -- Crer un dooble 
+
 -- Participer a un doodle 
+
 -- Voir la liste de ces doodle 
+
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)
 
