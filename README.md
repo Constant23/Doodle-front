@@ -2,93 +2,83 @@
 
 ## Context du projet 
 
-ce projet est un projet d'ecole pour mettre en application les differente technologie vu en cours. 
+ce projet est un projet d'école pour mettre en application les differentes technologies vu en cours. 
 
 c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA) [ici](https://github.com/Constant23/tpjpa2019sir)
 
-### Quelques resgles du metier de l'application :
+### Quelques regles metier de l'application :
 
--   Un utilisateur peut créer un ou plusieurs réunion
--   Une réunion est crée par un utilisateur
--   Une réunion des proposition
+-   Un utilisateur peut créer un ou plusieurs sondages
+-   Un sondage est créé par un utilisateur
+-   Une sondage des propositions
 -   Un proposition peut être de type date, de type lieu ou de type date et lieu(ce qui explique l'héritage)
 -   Un utilisateur peut voter pour un proposition
--   avant la réunion les participants sont invité par un lien unique pour renseigner leur préférence et allergie
+-   avant la réunion les participants sont invités par un lien unique pour renseigner leur préférence et allergie
 
 ### Ci dessous le diagramme de classe 
 
-[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
+[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)
+
+## Installation 
+
+-  cloner le projet 
+-  exécuter la commande :  npm install --save-dev @angular-devkit/build-angular
+- ng serve
+
+## Pour populer base de données 
+
+vider la base doodle créée par l'API et exécuter ce script [doodle.sql](https://github.com/Constant23/Doodle-front/blob/master/dooble.sql)
 
 ## Capture d'ecran du rendu 
 -   Page d'inscription 
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
 
+-   Page de connexion 
+
+Pour des raisons de simplicité l'utilisateur se connecte juste avec son email
+
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/2.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/2.PNG)
+
+-   Page d'accueil
+Dans cette application l'utilisateur peut :
+
+-- Crer un dooble 
+
+-- Participer à un doodle 
+
+-- Voir la liste de ces doodles 
 
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)
 
+-   Page de création d'un sondage  
 
-[SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+Pour créer un sondage l'utilisateur choisit le type de sondage (date, lieu ou date et lieu), il renseigne le titre, le résumé, il ajoute la liste des propositions de sondage. 
 
-For the legacy Bootstrap 3 version of this theme, you can view the [last stable release](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/releases/tag/v3.3.7%2B1) of SB Admin 2 for Bootstrap 3.
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/4.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/4.PNG)
 
-## Preview
+-   Page liste de mes sondages 
 
-[![SB Admin 2 Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)
+sur la liste de ces sondages proposés il peut voir le detail d'un sondage pour valider une proposition
 
-**[Launch Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/)**
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/5.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/5.PNG)
 
-## Status
+-   Page détail d'une reunion  
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-sb-admin-2/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin-2.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin-2)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin-2.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin-2)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin-2?type=dev)
+Sur la liste il a la possibilité de valider une proposition compte tenu du nombre de votants.  
 
-## Download and Installation
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/7.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/7.PNG)
 
-To begin using this template, choose one of the following options to get started:
+-   Page liste des sondages disponibles 
 
--   [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/sb-admin-2/)
--   Install via npm: `npm i startbootstrap-sb-admin-2`
--   Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-sb-admin-2.git`
--   [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2)
+sur la liste de ces sondages disponibles il peut choisir un sondage pour faire un vote pour une proposition . 
 
-## Usage
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/6.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/6.PNG)
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+-   Page de sondage 
 
-### Gulp Tasks
+ici il choisit une ou plusieurs proposition dans la liste des propositions du sondage.  
 
--   `gulp` the default task that builds everything
--   `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
--   `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
--   `gulp js` minifies the themes JS file
--   `gulp vendor` copies dependencies from node_modules to the vendor directory
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)
 
-You must have npm and Gulp installed globally on your machine in order to use these features. This theme was built using node v11.6.0 and the Gulp CLI v2.0.1. If Gulp is not running properly after running `npm install`, you may need to update node and/or the Gulp CLI locally.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/sb-admin-2/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
--   <https://startbootstrap.com>
--   <https://twitter.com/SBootstrap>
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
-
--   <http://davidmiller.io>
--   <https://twitter.com/davidmillerskt>
--   <https://github.com/davidtmiller>
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
