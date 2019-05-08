@@ -19,6 +19,12 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 
 [![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)
 
+## Installation 
+
+-  cloner le projet 
+-  exécuter la commande npm install --save-dev @angular-devkit/build-angular
+- ng serve
+
 ## Pour populer base de données 
 
 vider la base doodle créée par l'API et exécuter ce script [doodle.sql](https://github.com/Constant23/Doodle-front/blob/master/dooble.sql)
