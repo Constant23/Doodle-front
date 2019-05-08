@@ -1,4 +1,4 @@
-# [APPLICATION DE TYPE DOODLE <DOODLE CST>](https://github.com/Constant23/Doodle-front)
+# [APPLICATION DE TYPE DOODLE "DOODLE CST"](https://github.com/Constant23/Doodle-front)
 
 ### Etudiant : Constant LANGNITO
 
