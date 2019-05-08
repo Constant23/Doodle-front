@@ -4,9 +4,9 @@
 
 ce projet est un projet d'ecole pour mettre en application les differente technologie vu en cours. 
 
-c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA)
+c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA) [ici](https://github.com/Constant23/tpjpa2019sir)
 
-Quelque resgle du metier de l'application :
+### Quelques resgles du metier de l'application :
 
 -   Un utilisateur peut créer un ou plusieurs réunion
 -   Une réunion est crée par un utilisateur
@@ -14,6 +14,19 @@ Quelque resgle du metier de l'application :
 -   Un proposition peut être de type date, de type lieu ou de type date et lieu(ce qui explique l'héritage)
 -   Un utilisateur peut voter pour un proposition
 -   avant la réunion les participants sont invité par un lien unique pour renseigner leur préférence et allergie
+
+### Ci dessous le diagramme de classe 
+
+[![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
+
+## Capture d'ecran du rendu 
+-   Page d'inscription 
+
+[![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/1.PNG)
+
+
+
+After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
 
 [SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
