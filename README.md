@@ -1,10 +1,12 @@
 # [APPLICATION DE TYPE DOODLE](https://github.com/Constant23/Doodle-front)
 
+### Etudiant : Constant LANGNITO
+
 ## Context du projet 
 
 ce projet est un projet d'école pour mettre en application les differentes technologies vu en cours. 
 
-c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec Java (JPA) [ici](https://github.com/Constant23/tpjpa2019sir)
+c'est un projet Angular 7 qui est se connecte avec une API Rest developpée avec Java (JPA) [ici](https://github.com/Constant23/tpjpa2019sir)
 
 ### Quelques regles metier de l'application :
 
