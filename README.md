@@ -78,7 +78,10 @@ sur la liste de ces sondages disponibles il peut choisir un sondage pour faire u
 
 -   Page de sondage 
 
+
 ici il choisit une ou plusieurs proposition dans la liste des propositions du sondage.  
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/8.PNG)
+
+
 
