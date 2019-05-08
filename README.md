@@ -22,7 +22,7 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 ## Installation 
 
 -  cloner le projet 
--  exécuter la commande npm install --save-dev @angular-devkit/build-angular
+-  exécuter la commande :  npm install --save-dev @angular-devkit/build-angular
 - ng serve
 
 ## Pour populer base de données 
