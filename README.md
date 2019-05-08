@@ -19,8 +19,11 @@ c'est un projet Angular 7 qui est se connect avec une API Rest developpée avec 
 
 [![SB Admin 2 Preview](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/DC.PNG)
 
-## Capture d'ecran du rendu 
+## Pour populer base de données 
 
+[doodle.sql](https://github.com/Constant23/Doodle-front/blob/master/dooble.sql)
+
+vider la base doodle créée par l'API et executer ce script doodle.sql 
 
 ## Capture d'ecran du rendu 
 -   Page d'inscription 
@@ -34,6 +37,10 @@ Pour des raison de simplicité l'utilisateur se connecte juste avec son email
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/2.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/2.PNG)
 
 -   Page d'accueil
+Dans cette application l'utilisateur peut :
+-- Crer un dooble 
+-- Participer a un doodle 
+-- Voir la liste de ces doodle 
 
 [![](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)](https://github.com/Constant23/Doodle-front/blob/master/src/assets/capture/3.PNG)
 
